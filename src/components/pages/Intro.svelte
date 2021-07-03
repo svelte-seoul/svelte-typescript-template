@@ -1,5 +1,5 @@
 <script>
-	let string = `This is <strong>Intro!</strong>`;
+	import { _ } from 'svelte-i18n'
 </script>
 
-<p>{@html string}</p>
+<p>{$_('intro.title')}</p>

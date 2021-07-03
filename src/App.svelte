@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './i18n';
 	import Router from 'svelte-spa-router';
 	import routes from './components/navigations/root';
 </script>
