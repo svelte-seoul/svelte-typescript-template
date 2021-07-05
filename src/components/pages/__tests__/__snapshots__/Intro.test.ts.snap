@@ -10,8 +10,18 @@ exports[`should render without error 1`] = `
     <button
       class="svelte-1eav0tq"
     >
-      Dark Mode Toggle
+      Change Theme
     </button>
+     
+    <button
+      class="svelte-1eav0tq"
+    >
+      Get User
+    </button>
+     
+    <p>
+       
+    </p>
   </div>
 </body>
 `;

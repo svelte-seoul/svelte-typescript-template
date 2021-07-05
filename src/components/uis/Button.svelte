@@ -10,11 +10,16 @@
 </style>
 
 <script>
-  function toggle() {
-    window.document.body.classList.toggle('dark-mode');
+  import {createEventDispatcher} from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
+  function handleClick() {
+    dispatch('click');
   }
+
 </script>
 
-<button on:click={toggle}>
+<button on:click={handleClick}>
   <slot />
 </button>
