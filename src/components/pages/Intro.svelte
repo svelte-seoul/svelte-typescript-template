@@ -1,9 +1,8 @@
 <script lang="ts">
-  /* eslint-disable @typescript-eslint/no-unsafe-assignment */
   /* eslint-disable @typescript-eslint/no-unsafe-call */
   import { _ } from 'svelte-i18n';
   import Button from '../uis/Button.svelte';
-  import { userStore } from '../../stores/user.ts';
+  import { userStore } from '../../stores/userStore';
 
   const {fullname, setName} = userStore;
 
