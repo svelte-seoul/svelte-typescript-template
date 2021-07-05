@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n';
+  import {_} from 'svelte-i18n';
   import Button from '../uis/Button.svelte';
-  import { userStore } from '../../stores/userStore';
+  import {userStore} from '../../stores/userStore';
 
   const {fullname, setName} = userStore;
 

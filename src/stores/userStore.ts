@@ -1,4 +1,4 @@
-import { Readable, Writable, derived, writable } from "svelte/store";
+import {Readable, Writable, derived, writable} from "svelte/store";
 
 export class UserStore {
     private _firstname: Writable<string>;
