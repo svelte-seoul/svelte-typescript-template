@@ -3,7 +3,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   
   parserOptions: {
@@ -11,11 +11,11 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
-    extraFileExtensions: ['.svelte']
+    extraFileExtensions: ['.svelte'],
   },
   env: {
     es6: true,
-    browser: true
+    browser: true,
   },
   overrides: [
     {
@@ -50,7 +50,7 @@ module.exports = {
     'svelte3/typescript': require('typescript'),
     // ignore style tags in Svelte because of Tailwind CSS
     // See https://github.com/sveltejs/eslint-plugin-svelte3/issues/70
-    'svelte3/ignore-styles': () => true
+    'svelte3/ignore-styles': () => true,
   },
   plugins: ['svelte3', '@typescript-eslint'],
   ignorePatterns: ['node_modules'],
@@ -58,7 +58,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     camelcase: 0,
     indent: 'off',
-    'no-use-before-define': [0],
     '@typescript-eslint/interface-name-prefix': 0,
     'no-console': 'warn',
     curly: ["error", "multi"],
@@ -130,4 +129,4 @@ module.exports = {
     'no-undef': 0,
     'no-duplicate-imports': 'error',
   },
-}
+};
