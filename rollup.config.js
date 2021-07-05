@@ -14,20 +14,22 @@ function serve() {
 	let server;
 
 	function toExit() {
-		if (server) server.kill(0);
+		// eslint-disable-next-line
+			if (server) server.kill(0);
 	}
 
 	return {
 		writeBundle() {
 			if (server) return;
+
 			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
 				stdio: ['ignore', 'inherit', 'inherit'],
-				shell: true
+				shell: true,
 			});
 
 			process.on('SIGTERM', toExit);
 			process.on('exit', toExit);
-		}
+		},
 	};
 }
 
@@ -37,18 +39,19 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'dooboolab',
-		file: 'public/build/bundle.js'
+		file: 'public/build/bundle.js',
 	},
 	plugins: [
 		svelte({
 			preprocess: sveltePreprocess({ sourceMap: !production }),
 			compilerOptions: {
 				// enable run-time checks when not in production
-				dev: !production
-			}
+				dev: !production,
+			},
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 		css({ output: 'bundle.css' }),
 
 		// If you have external dependencies installed from
@@ -58,12 +61,12 @@ export default {
 		// https://github.com/rollup/plugins/tree/master/packages/commonjs
 		resolve({
 			browser: true,
-			dedupe: ['svelte']
+			dedupe: ['svelte'],
 		}),
 		commonjs(),
 		typescript({
 			sourceMap: !production,
-			inlineSources: !production
+			inlineSources: !production,
 		}),
 
 		// In dev mode, call `npm run start` once
@@ -78,9 +81,9 @@ export default {
 		// instead of npm run dev), minify
 		production && terser(),
 
-		json()
+		json(),
 	],
 	watch: {
-		clearScreen: false
-	}
+		clearScreen: false,
+	},
 };
