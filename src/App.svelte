@@ -1,4 +1,14 @@
 <style>
+  :global(body) {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s;
+  }
+  :global(body.dark-mode) {
+    background-color: black;
+    color: white;
+  }
+
   main {
     text-align: center;
     padding: 1em;
