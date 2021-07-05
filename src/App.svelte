@@ -1,4 +1,20 @@
 <style>
+  :global(body) {
+    --button: #0084f6;
+    --text: black;
+
+    background-color: var(--background-color);
+    color: var(--color);
+    transition: background-color 0.3s;
+  }
+  :global(body.dark-mode) {
+    --button: #069ccd;
+    --text: white;
+
+    background-color: black;
+    color: white;
+  }
+
   main {
     text-align: center;
     padding: 1em;
