@@ -22,8 +22,8 @@ jobs:
       - name: Build typescript
         run: yarn tsc
 
-      # - name: Test
-      #   run: yarn test --coverage
+      - name: Test
+        run: yarn test --coverage
 
       # - name: Upload coverage to Codecov
       #   uses: codecov/codecov-action@v1

@@ -1,7 +1,13 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
-  "include": ["src/**/*"],
+  "include": [
+    "./src/**/*",
+    "babel.config.js",
+    "jest.config.js",
+    "jestSetup.ts",
+    "eslintrc.js"
+  ],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
   "compilerOptions": {
     "outDir": "build",
