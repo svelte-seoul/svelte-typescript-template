@@ -6,6 +6,7 @@ module.exports = {
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|ts?|svelte?)$',
   moduleFileExtensions: ['js', 'ts', 'svelte'],
+  modulePathIgnorePatterns: ['dist', 'build'],
   testEnvironment: 'jsdom',
   globals: {
     window: {},
@@ -14,4 +15,4 @@ module.exports = {
       tsconfig: 'tsconfig.json',
     },
   },
-}
+};
