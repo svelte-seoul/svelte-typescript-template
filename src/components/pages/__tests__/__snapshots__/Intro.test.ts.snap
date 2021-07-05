@@ -6,6 +6,12 @@ exports[`should render without error 1`] = `
     <p>
       Intro
     </p>
+     
+    <button
+      class="svelte-1eav0tq"
+    >
+      Dark Mode Toggle
+    </button>
   </div>
 </body>
 `;
