@@ -1,11 +1,12 @@
+import sveltePreprocess, {postcss} from 'svelte-preprocess';
+
 import commonjs from '@rollup/plugin-commonjs';
 import css from 'rollup-plugin-css-only';
 import json from "@rollup/plugin-json";
 import livereload from 'rollup-plugin-livereload';
 import resolve from '@rollup/plugin-node-resolve';
 import svelte from 'rollup-plugin-svelte';
-import sveltePreprocess from 'svelte-preprocess';
-import { terser } from 'rollup-plugin-terser';
+import {terser} from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -43,7 +44,19 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: sveltePreprocess({ sourceMap: !production }),
+			preprocess: [
+				sveltePreprocess({
+					postcss: true,
+					sourceMap: !production,
+				}),
+				postcss({
+					plugins: [
+						require('precss'),
+						require('postcss-import'),
+						require('postcss-cssnext'),
+					],
+				}),
+			],
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production,
@@ -52,7 +65,7 @@ export default {
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		css({ output: 'bundle.css' }),
+		css({output: 'bundle.css'}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
