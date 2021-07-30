@@ -18,6 +18,9 @@
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
   "prettier.configPath": ".prettierrc.js",
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
   "svelte.plugin.css.diagnostics.enable": false,
   "css.validate": false,
   "less.validate": false,
