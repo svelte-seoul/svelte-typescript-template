@@ -1,7 +1,4 @@
 {
-  "files.associations": {
-    "*.svelte": "html"
-  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -20,5 +17,9 @@
   },
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
-  "prettier.configPath": ".prettierrc.js"
+  "prettier.configPath": ".prettierrc.js",
+  "svelte.plugin.css.diagnostics.enable": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
