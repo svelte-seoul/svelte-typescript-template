@@ -1,6 +1,6 @@
 <style>
   button {
-    background-color: var(--button);
+    background-color: var(--primary);
     color: var(--text);
     border: none;
     border-radius: 4px;
@@ -17,7 +17,6 @@
   function handleClick() {
     dispatch('click');
   }
-
 </script>
 
 <button on:click={handleClick}>

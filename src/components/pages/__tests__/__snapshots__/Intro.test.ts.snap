@@ -8,13 +8,13 @@ exports[`should render without error 1`] = `
     </p>
      
     <button
-      class="svelte-1eav0tq"
+      class="svelte-yxze2g"
     >
       Change Theme
     </button>
      
     <button
-      class="svelte-1eav0tq"
+      class="svelte-yxze2g"
     >
       Get User
     </button>
