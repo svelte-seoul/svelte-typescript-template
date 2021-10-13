@@ -1,4 +1,4 @@
-<style>
+<style lang="postcss">
   :global(body.light-mode) {
     --background: #fff;
     --paper: #f2f5f6;
@@ -43,6 +43,31 @@
     transition: background-color 0.3s;
     background-color: var(--background);
     color: var(--text);
+
+    input {
+      background-color: var(--background);
+      color: var(--text);
+      caret-color: var(--text);
+
+      &:focus {
+        outline: 1px solid var(--primary);
+      }
+    }
+
+    textarea {
+      background-color: var(--background);
+      color: var(--text);
+      caret-color: var(--text);
+      box-sizing: border-box;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      resize: none;
+
+      &:focus {
+        outline: 1px solid var(--primary);
+      }
+    }
+
   }
 
   main {
