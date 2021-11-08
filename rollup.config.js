@@ -21,7 +21,7 @@ function serve() {
 
 	return {
 		writeBundle() {
-			if (server) return;
+			if (server) {return;}
 
 			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
 				stdio: ['ignore', 'inherit', 'inherit'],
@@ -54,6 +54,9 @@ export default {
 						require('precss'),
 						require('postcss-import'),
 						require('postcss-cssnext'),
+						require('postcss-nested'),
+						require('postcss-preset-env'),
+						require('postcss-custom-media'),
 					],
 				}),
 			],
