@@ -1,8 +1,8 @@
 {
-  "intro": {
+  "Intro": {
     "title": "소개"
   },
-  "temp": {
+  "Temp": {
     "title": "템플릿"
   }
 }
